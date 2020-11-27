@@ -5,7 +5,7 @@ char *mx_itoa(int number){
     long n = number;
     char *str = mx_strnew(len);
     int sign, i = 0;
-    if(number == 0) return str;
+    if(number == 0) return "0";
     if((sign = number) < 0) n *= -1;
     while(n != 0){
         str[i] = n % 10 + '0'; 
@@ -14,6 +14,6 @@ char *mx_itoa(int number){
     }
     if(sign < 0) str[i] = '-';
     mx_str_reverse(str);
-    str[i + 1] = '\0';
+    str[i + 1] = (char)NULL;
     return str;
 }

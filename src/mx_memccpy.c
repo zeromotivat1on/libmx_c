@@ -5,7 +5,7 @@ void *mx_memccpy(void *restrict dst, const void *restrict src, int c, size_t n){
     const char *_src = src;
     for(size_t i = 0; i < n; ++i){
         _dst[i] = _src[i];
-        if(_src[i] == c) break;
+        if(_src[i] == (unsigned char)c) return (void*)&(_dst[i + 1]);
     }
-    return _dst;
+    return NULL;
 }

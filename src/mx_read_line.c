@@ -14,7 +14,7 @@ int mx_read_line(char **lineptr, size_t buf_size, char delim, const int fd){
             else break;
         } else {
             if (c == delim) break;
-            if (tot_bytes < buf_size + 1) {
+            if (tot_bytes < buf_size) {
                 tot_bytes++;
                 *buffer++ = c;
             }

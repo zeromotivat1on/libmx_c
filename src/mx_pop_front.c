@@ -9,5 +9,6 @@ void mx_pop_front(t_list **head){
     }
     t_list *new_head = (*head)->next;
     free(*head);
+    (*head) = NULL;
     *head = new_head;
 }

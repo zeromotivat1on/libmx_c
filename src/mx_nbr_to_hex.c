@@ -1,7 +1,6 @@
 #include "../inc/libmx.h"
 
 char *mx_nbr_to_hex(unsigned long nbr) {
-	if (nbr > 4294967295) return 0;
 	unsigned long quotient = nbr;
 	int remainder, j = 0, size = 0;
 	int temp = nbr;
