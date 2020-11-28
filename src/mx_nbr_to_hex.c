@@ -4,7 +4,7 @@ char *mx_nbr_to_hex(unsigned long nbr) {
 	if(nbr == 0) return "0";
 	int remainder, j = 0, size = 0;
 	int temp = nbr;
-	while (temp != 0) { size++; temp /= 16 }
+	while (temp != 0) { size++; temp /= 16; }
 	char *hexadecimal = mx_strnew(size);
 	while (nbr != 0) {
 		remainder = nbr % 16;
